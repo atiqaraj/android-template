@@ -3,32 +3,20 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.30'
-    id 'dk.nstack.translation.plugin'
     id 'dagger.hilt.android.plugin'
 }
 
-translation {
-    appId = keys.appId
-    apiKey = keys.apiKey
-    acceptHeader = keys.acceptHeader
-}
-
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
     flavorDimensions "default"
 
     defaultConfig {
         applicationId "com.monstarlab"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-
-        manifestPlaceholders = [
-                appId : keys.appId,
-                apiKey: keys.apiKey
-        ]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -120,7 +108,6 @@ dependencies {
 
     implementation("androidx.datastore:datastore-preferences:${versions.datastore}")
 
-    implementation "dk.nodes.nstack:nstack-kotlin:${versions.nodes_nstack_kotlin}"
     implementation "com.jakewharton.timber:timber:${versions.timber}"
 
 }

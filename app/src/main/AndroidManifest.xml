@@ -23,22 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- nstack app id and key from build.gradle manifest placeholder -->
-        <meta-data
-            android:name="dk.nodes.nstack.appId"
-            android:value="${appId}"
-            tools:replace="android:value" />
-        <meta-data
-            android:name="dk.nodes.nstack.apiKey"
-            android:value="${apiKey}"
-            tools:replace="android:value" />
-
-        <meta-data
-            android:name="dk.nodes.nstack.env"
-            android:value="${env}"
-            tools:replace="android:value" />
-
     </application>
 
 </manifest>
